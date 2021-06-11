@@ -1,15 +1,22 @@
 var express=require("express");
+var dbs=require("../controllers/db")
+const { renderHome,
+    renderBlogs,
+    renderBlogPost,
+    renderAddBlog}=require("../controllers/renders")
 
 const router=express.Router();
 
-router.get("/hello",(req,res,next)=>{
-    // res.send("Next Page")
-    res.render("index.html")
-})
+router.get("/",renderHome)
 
-router.get("/",(req,res,next)=>{
-   
-    res.render("index")
-})
+
+router.get("/blogs",dbs.getAllBlogs,renderBlogs)
+
+router.get("/blogs/new",renderAddBlog)
+
+router.get("/blogs/:blogId",dbs.getOneBlog,renderBlogPost)
+
+router.post("/blogs/new",dbs.postNewBlog)
+
 
 module.exports=router;

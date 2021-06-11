@@ -1,12 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<%- include('partials/header') -%>
+<main>
+    <link rel="stylesheet" href="/css/blogs.css">
+    <div class="container">
+        <h1>Blogs</h1>
+        <div class="row">
+
+            <span style="float: left;" ></span> <span style="float: right;font-size: medium;" ><a href="/blogs/new"><i class="material-icons medium">add</i>Write</a></span>
+        </div>
+        <% blogs.forEach((blog)=>{%>
+        <div class="col s12 m7">
+            
+            <div class="card horizontal">
+              <div class="card-image" style="width: 25%;">
+                <img src="<%= blog.img%>" style="height: 100%;max-height: 30vh;width: 100%;">
+              </div>
+              <div class="card-stacked">
+                <div class="card-content">
+                    <h4><%= blog.title %></h4>
+                  <p class="elip"><%= blog.blog %> </p>
+                </div>
+                <div class="card-action">
+                  <a href="/blogs/<%= blog._id%>">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% })%>
+
+
+          <!-- <div class="col s12 m7">
+            
+            <div class="card horizontal ">
+              <div class="card-image">
+                <img src="https://lorempixel.com/300/190/nature/6" style="height: 100%;width: 100%;">
+              </div>
+              <div class="card-stacked">
+                <div class="card-content " >
+                    <h4>Title</h4>
+                  <p class="elip">I am a very simple card. I am good at containing small bits of information. qwewq dn whqeoi whqo whq hhhhh h hjjjjjjjjop       oooooooooooo ooooooooo o                ooooooooooooooo oooooooooooooo      oojhndk sad uhabdjlh oubsd ub jwhdawnodhoihdiaosn aoshdionsdhisndhsapsdp jspadndpi</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+
+
+    </div>
     
-</body>
-</html>
+      <script >
+       
+    </script>
+</main>
+
+
+<%- include('partials/footer') -%>

@@ -1,0 +1,14 @@
+<%- include('partials/header') -%>
+<main>
+    <link rel="stylesheet" href="/css/blogPost.css">
+
+    <div class="container">
+        <h2><%= blog.title %></h2>
+        <img src="<%= blog.img%>" alt="" style="height:30%;max-height:80vh   ;width: 90%;">
+        <p><%= blog.author %><br><%= blog.date %></p>
+        <p><%= blog.blog %></p>
+    <br><br>
+    </div>
+    
+</main>
+<%- include('partials/footer') -%>
