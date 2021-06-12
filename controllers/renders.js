@@ -15,9 +15,14 @@ const renderBlogPost=(req,res,next)=>{
     res.render("blogPost",{blog:req.blogData})
 }
 
+const renderBlogPostEdit=(req,res,next)=>{
+    res.render("blogPostEdit",{blog:req.blogData})
+}
+
 module.exports={
     renderHome,
     renderBlogs,
     renderBlogPost,
-    renderAddBlog
+    renderAddBlog,
+    renderBlogPostEdit
 }

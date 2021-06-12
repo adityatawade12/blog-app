@@ -1,14 +1,26 @@
 var express= require("express");
 var app=express();
 var router = require("./routes/routes")
-var bodyParser=require("body-parser")
+var methodOverride=require("method-override")
+var favicon = require('serve-favicon')
+const expressSanitizer = require('express-sanitizer');
+var expressLogging = require('express-logging'),logger = require('logops');
+ 
+
+app.use(expressLogging(logger));
+
+app.use(favicon('./favicon.ico'))
 app.use(express.static("public"))
-app.use(bodyParser.urlencoded({extended:false}))
-app.use(bodyParser.json());
+app.use(express.json())
+app.use(express.urlencoded({extended:false}))
+app.use(methodOverride("_method"))
+app.use(expressSanitizer());
+app.use(router)
+
 app.set("view engine","ejs")
 
 
-app.use(router)
+
 
 
 

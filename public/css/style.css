@@ -12,3 +12,13 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+
+.iconCustom {
+  background: url('../images/android-chrome-192x192.png');
+  height: 4vh;
+  width: 6vw;
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* Other styles here */
+}

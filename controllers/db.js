@@ -18,7 +18,7 @@ const postNewBlog=(req,res,next)=>{
 
       const db = client.db('blogs')
       const collection = db.collection('blogData')
-      collection.insertOne({author: req.body.author,title:req.body.title,img:req.body.img,blog:req.body.blog,date:new Date()}, (err, result) => {
+      collection.insertOne({author: req.sanitize(req.body.author),title:req.sanitize(req.body.title),img:req.sanitize(req.body.img),blog:req.sanitize(req.body.blog),date:new Date()}, (err, result) => {
           console.log(err)
         console.log(result)
         client.close()
@@ -82,9 +82,73 @@ const getOneBlog=(req,res,next)=>{
 
 }
 
+const updateBlog=(req,res,next)=>{
+    
+    
+  mongo.connect(url, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    }, (err, client) => {
+    if (err) {
+      console.error(err)
+      return
+    }
+
+    const db = client.db('blogs')
+    const collection = db.collection('blogData')
+    try {
+      collection.updateOne({"_id": new ObjectID(req.params.blogId)}, {'$set': {author: req.sanitize(req.body.author),title:req.sanitize(req.body.title),img:req.sanitize(req.body.img),blog:req.sanitize(req.body.blog),lastUpdated:new Date()}}, (err, item) => {
+        console.log(item)
+        console.log("heyyaa")
+        client.close()
+      })
+    } catch (error) {
+      console.log(error)
+    }
+    
+ 
+  
+  })
+  res.redirect("/blogs/"+req.params.blogId)
+}
+
+
+const deleteBlog=(req,res,next)=>{
+    
+    
+  mongo.connect(url, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    }, (err, client) => {
+    if (err) {
+      console.error(err)
+      return
+    }
+
+    const db = client.db('blogs')
+    const collection = db.collection('blogData')
+    try {
+      collection.deleteOne({"_id": new ObjectID(req.params.blogId)}, (err, item) => {
+        console.log(item)
+        console.log("dELETING BLOG")
+        client.close()
+      })
+      
+    } catch (error) {
+      console.log(error)
+    }
+    
+ 
+  
+  })
+  res.redirect("/blogs")
+}
+
 
 module.exports={
     postNewBlog,
     getAllBlogs,
-    getOneBlog
+    getOneBlog,
+    updateBlog,
+    deleteBlog
 }

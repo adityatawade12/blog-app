@@ -5,8 +5,15 @@
     <div class="container">
         <h2><%= blog.title %></h2>
         <img src="<%= blog.img%>" alt="" style="height:30%;max-height:80vh   ;width: 90%;">
-        <p><%= blog.author %><br><%= blog.date %></p>
+        <p><%= blog.author %><br><%= blog.date %> <br>
+            <% if (blog.lastUpdated!=null){ %>
+            Last Updated: <%= blog.lastUpdated %>
+                <%}%>
+        </p>
         <p><%= blog.blog %></p>
+        <br>
+        <a href="/blogs/<%=blog._id %>/edit" class="waves-effect waves-light btn-large orange"><i class="material-icons left">create</i>Edit</a>
+        
     <br><br>
     </div>
     
