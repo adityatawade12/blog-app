@@ -1,7 +1,8 @@
+require('dotenv').config()
 const mongo = require('mongodb').MongoClient
-const url = 'mongodb://localhost:27017'
+const url = process.env.DBLink
 var ObjectID = require('mongodb').ObjectID;   
-const express = require("express")
+
 
 
 const postNewBlog=(req,res,next)=>{

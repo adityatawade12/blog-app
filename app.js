@@ -5,7 +5,7 @@ var methodOverride=require("method-override")
 var favicon = require('serve-favicon')
 const expressSanitizer = require('express-sanitizer');
 var expressLogging = require('express-logging'),logger = require('logops');
- 
+require('dotenv').config()
 
 app.use(expressLogging(logger));
 
@@ -25,6 +25,6 @@ app.set("view engine","ejs")
 
 
 
-app.listen(process.env.PORT||3000,process.env.IP,()=>{
-    console.log("Server is running"+process.env.IP)
+app.listen(process.env.PORT,()=>{
+    console.log("Server is running on port"+process.env.PORT)
 })
