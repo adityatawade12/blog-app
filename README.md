@@ -2,6 +2,8 @@
 # Blog-App
 
 This is a simple blog website. User can write blogs, read blogs and editor delete blogs. 
+
+
 ![image](https://user-images.githubusercontent.com/62465343/121800695-fc766680-cc50-11eb-9690-5a7f71544caa.png)
 
 
@@ -15,9 +17,6 @@ This is a simple blog website. User can write blogs, read blogs and editor delet
 - NodeJS, ExpressJS
 - MongoDb
 
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
 
 
 ## Getting Started
@@ -28,33 +27,38 @@ This is a simple blog website. User can write blogs, read blogs and editor delet
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+### Clone the repository
+```go
+git clone https://github.com/adityatawade12/blog-app.git
+```
+
 
 ### Setup
+- Go to the cloned repo and run the following command to install all the required packages
+ ```go
+npm i
+```
 
-### Install
+- Create a .env file in the root folder and initalize 2 variables: PORT and DBLink in it
+ ```go
+PORT= <YOUR PORT>
+DBLink= <Link to your Mongodb database>
+```
+
 
 ### Usage
+To run the application, run the following command in the root folder
+ ```go
+npm start
+```
 
-### Run tests
 
-### Deployment
+## 👤  Author
+
+- GitHub: [@githubhandle](https://github.com/adityatawade12)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/aditya-tawade-5595961ab/)
 
 
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
@@ -74,4 +78,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [ Apache-2.0 License](./LISCENCE.md) licensed.
