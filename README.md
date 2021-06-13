@@ -4,13 +4,6 @@
 This is a simple blog website. User can write blogs, read blogs and editor delete blogs. 
 
 
-![image](https://user-images.githubusercontent.com/62465343/121800695-fc766680-cc50-11eb-9690-5a7f71544caa.png)
-
-
-
-![image](https://user-images.githubusercontent.com/62465343/121800789-6c84ec80-cc51-11eb-8d7b-0405413ec28b.png)
-
-
 ## Built With
 
 - HTML, CSS, JS
@@ -20,9 +13,6 @@ This is a simple blog website. User can write blogs, read blogs and editor delet
 
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
 
 
 To get a local copy up and running follow these simple example steps.
@@ -58,6 +48,12 @@ npm start
 - GitHub: [@githubhandle](https://github.com/adityatawade12)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/aditya-tawade-5595961ab/)
 
+## Screenshots
+
+
+![image](https://user-images.githubusercontent.com/62465343/121817024-8992dd00-cc9c-11eb-94d4-71d93e5f16c5.png)
+
+![image](https://user-images.githubusercontent.com/62465343/121817052-b3e49a80-cc9c-11eb-84f9-6db5fc00407c.png)
 
 
 ## 🤝 Contributing
@@ -70,11 +66,6 @@ Feel free to check the [issues page](../../issues/).
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
