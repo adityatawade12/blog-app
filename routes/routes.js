@@ -4,7 +4,9 @@ const { renderHome,
     renderBlogs,
     renderBlogPost,
     renderAddBlog,
-renderBlogPostEdit}=require("../controllers/renders")
+renderBlogPostEdit,
+renderNonePage
+}=require("../controllers/renders")
 
 const router=express.Router();
 
@@ -21,5 +23,6 @@ router.post("/blogs/new",dbs.postNewBlog)
 router.get("/blogs/:blogId/edit",dbs.getOneBlog,renderBlogPostEdit)
 router.put("/blogs/:blogId/edit",dbs.updateBlog)
 router.delete("/blogs/:blogId",dbs.deleteBlog)
+router.get("*",renderNonePage)
 
 module.exports=router;

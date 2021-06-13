@@ -19,10 +19,15 @@ const renderBlogPostEdit=(req,res,next)=>{
     res.render("blogPostEdit",{blog:req.blogData})
 }
 
+const renderNonePage=(req,res,next)=>{
+    res.render("none")
+}
+
 module.exports={
     renderHome,
     renderBlogs,
     renderBlogPost,
     renderAddBlog,
-    renderBlogPostEdit
+    renderBlogPostEdit,
+    renderNonePage
 }
