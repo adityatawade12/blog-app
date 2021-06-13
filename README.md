@@ -1,20 +1,19 @@
-# blog-app
-A simple blog website
-
 
 # Blog-App
 
-> This is a simple blog website. User can write blogs, read blogs and editor delete blogs. 
+This is a simple blog website. User can write blogs, read blogs and editor delete blogs. 
+![image](https://user-images.githubusercontent.com/62465343/121800695-fc766680-cc50-11eb-9690-5a7f71544caa.png)
 
-![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+
+![image](https://user-images.githubusercontent.com/62465343/121800789-6c84ec80-cc51-11eb-8d7b-0405413ec28b.png)
+
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML, CSS, JS
+- NodeJS, ExpressJS
+- MongoDb
 
 ## Live Demo
 
